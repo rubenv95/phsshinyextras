@@ -1,4 +1,7 @@
 
+# Write as functions (e.g., get_palette_phs)
+# You can document it or not - don't need to export
+# Utils/globalargs
 pkg.env <- new.env()
 
 pkg.env$palette_phs <- c("#3F3685", "#9B4393", "#1E7F84", "#83BB26", "#3393DD",
@@ -10,6 +13,8 @@ pkg.env$xaxis_month <- list(title = "Month",
                             titlefont = list(size=18),
                             showline = TRUE,
                             fixedrange=TRUE)
+
+
 
 
 
@@ -25,7 +30,9 @@ pkg.env$xaxis_month <- list(title = "Month",
 #'
 #' @return A plotly chart
 #'
-#' @example man/proportion_barchart.Rd
+#' @import rlang
+#'
+#' @example man/examples/proportion_barchart.R
 #' @export
 
 
@@ -79,7 +86,7 @@ proportion_barchart = function(data,
 
   # TRUE/FALSE input. FALSE means there will be no bar gap
   if(!bargap) {
-    p = p %>%
+    p = p |>
       plotly::layout(bargap = 0)
   }
 
