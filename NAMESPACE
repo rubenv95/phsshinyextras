@@ -2,3 +2,5 @@
 
 export(primary_suppression)
 export(proportion_barchart)
+export(secondary_suppression)
+import(rlang)
