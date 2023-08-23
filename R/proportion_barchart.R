@@ -1,32 +1,18 @@
-
-# Write as functions (e.g., get_palette_phs)
-# You can document it or not - don't need to export
-# Utils/globalargs
-pkg.env <- new.env()
-
-pkg.env$palette_phs <- c("#3F3685", "#9B4393", "#1E7F84", "#83BB26", "#3393DD",
-                         "#6B5C85")
-pkg.env$xaxis_month <- list(title = "Month",
-                            type = 'date',
-                            tickformat = "%b<br>%Y",
-                            tickfont = list(size=14),
-                            titlefont = list(size=18),
-                            showline = TRUE,
-                            fixedrange=TRUE)
-
-
-
-
-
 #' Create a 100% proportion bar chart
+#'
+#' Creates a generic proportion bar chart in plotly. This function makes it
+#' quick and easy to reuse similar code, such as in a dashboard
 #'
 #' @param data The dataframe you want to create a chart from
 #' @param x_axis The x axis variable (usually a date)
 #' @param y_axis The proportion y axis variable in decimal format
-#' @param category_var The category variable you want to split by, like color in plotly or fill in ggplot2
+#' @param category_var The category variable you want to split by, like color in
+#'   plotly or fill in ggplot2
 #' @param bargap TRUE or FALSE whether you'd like to have a gap between the bars
-#' @param stacked TRUE or FALSE whether you'd like the chart stacked (FALSE = side by side)
-#' @param palette A vector of hex codes for changing the palette. Default is PHS colours
+#' @param stacked TRUE or FALSE whether you'd like the chart stacked (FALSE =
+#'   side by side)
+#' @param palette A vector of hex codes for changing the palette. Default is PHS
+#'   colours
 #'
 #' @return A plotly chart
 #'
