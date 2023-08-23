@@ -21,19 +21,23 @@ proportion_barchart(
 
 \item{y_axis}{The proportion y axis variable in decimal format}
 
-\item{category_var}{The category variable you want to split by, like color in plotly or fill in ggplot2}
+\item{category_var}{The category variable you want to split by, like color in
+plotly or fill in ggplot2}
 
 \item{bargap}{TRUE or FALSE whether you'd like to have a gap between the bars}
 
-\item{stacked}{TRUE or FALSE whether you'd like the chart stacked (FALSE = side by side)}
+\item{stacked}{TRUE or FALSE whether you'd like the chart stacked (FALSE =
+side by side)}
 
-\item{palette}{A vector of hex codes for changing the palette. Default is PHS colours}
+\item{palette}{A vector of hex codes for changing the palette. Default is PHS
+colours}
 }
 \value{
 A plotly chart
 }
 \description{
-Create a 100\% proportion bar chart
+Creates a generic proportion bar chart in plotly. This function makes it
+quick and easy to reuse similar code, such as in a dashboard
 }
 \examples{
 library(dplyr)
