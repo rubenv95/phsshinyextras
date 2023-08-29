@@ -11,8 +11,6 @@ secondary_suppression = function(data,
   # Suppression column
   var = dplyr::enquo(suppression_variable)
 
-  browser()
-
   data |>
     dplyr::group_by(...) |>
     dplyr::mutate(
